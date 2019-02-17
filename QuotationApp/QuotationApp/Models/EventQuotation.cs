@@ -19,10 +19,10 @@ namespace QuotationApp.Models
 
         [DataType(DataType.Date)]
         public DateTime Date { get; set; }
-
+        
         [DataType(DataType.Time)]
         public DateTime hour { get; set; }
-
+        
         public string Colors { get; set; }
 
         public Boolean FullPackage { get; set; }
