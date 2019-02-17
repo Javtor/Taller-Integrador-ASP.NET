@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using QuotationApp.Models;
 
 namespace QuotationApp
 {
@@ -33,6 +35,9 @@ namespace QuotationApp
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<QuotationAppContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("QuotationAppContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
