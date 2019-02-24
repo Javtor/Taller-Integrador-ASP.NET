@@ -41,7 +41,7 @@ namespace QuotationApp.Migrations
 
                     b.Property<string>("Type");
 
-                    b.Property<DateTime>("hour");
+                    b.Property<DateTime>("Hour");
 
                     b.HasKey("Id");
 
